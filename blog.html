@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Blog — Pro Minds Tutoring</title>
+  <meta name="description" content="Study tips, updates, and moments from Pro Minds Tutoring sessions." />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700;6..12,800;6..12,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f6fafc;color:#133448;font-family:"Source Sans 3",system-ui,sans-serif;font-size:17px;line-height:1.5}
+    .wrap { width:min(1180px,calc(100% - 40px));margin-inline:auto }
+    .topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid #bdd3dc}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0a3d62;font-weight:800;font-size:19px}
+    .brand img{border-radius:7px;display:block}
+    .topnav nav{display:flex;gap:28px;align-items:center}
+    .topnav nav a{color:#0a3d62;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.05em}
+    .topnav nav a:hover{color:#0e6688}
+    @media(max-width:560px){.topnav nav{gap:18px}.topnav nav a{font-size:15px}.brand span{display:none}}
+    .hero{background:#073c59;color:#fff;text-align:center;padding:clamp(54px,8vw,96px) 0}
+    .hero h1{margin:0 0 12px;font-family:"Nunito Sans",sans-serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(34px,4.5vw,52px);line-height:1.05}
+    .hero h1 .gold{color:#ffcc32}
+    .hero p{margin:0;opacity:.9;font-size:18px}
+    .card{background:#fff;border:1px solid #bdd3dc;border-radius:18px;padding:36px;margin:36px 0;text-align:center;box-shadow:0 20px 60px rgba(5,56,82,.13)}
+    .card h2{font-family:"Nunito Sans",sans-serif;font-weight:900;color:#0a3150;margin:0 0 10px}
+    .card .date{color:#536d7d;font-size:15px;margin:0}
+    .post-photo{width:100%;max-width:640px;height:auto;display:block;border-radius:12px;margin:18px auto 6px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;margin-top:18px;background:#f5b800;color:#0b3249;font-family:"Nunito Sans",sans-serif;font-weight:900;text-decoration:none;padding:13px 26px;border-radius:12px;box-shadow:0 12px 30px rgba(245,184,0,.22);transition:transform .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    footer{text-align:center;padding:28px 20px;color:#536d7d;font-size:14px}
+    :focus-visible{outline:4px solid #ffcc32;outline-offset:3px}
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/"><img src="/pie-logo.png" alt="" width="28" height="28" /><span>Pro Minds</span></a>
+      <nav aria-label="Programs">
+        <a href="https://promindstutoring.com/sat/">SAT</a>
+        <a href="https://promindstutoring.com/act/">ACT</a>
+        <a href="https://ap.promindstutoring.com/">AP</a>
+        <a href="https://promindstutoring.com/algebra/">Algebra</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap">
+      <h1>The Pro Minds <span class="gold">Blog</span></h1>
+      <p>Study tips, test prep advice, and updates for parents.</p>
+    </div>
+  </section>
+  <main class="wrap">
+    <div class="card">
+      <h2>Algebra 1 (honors) students 😃 enjoying the test</h2>
+      <p class="date">October 14, 2026</p>
+      <img class="post-photo" src="/algebra1-honors-test.jpg" alt="Algebra 1 (honors) students working on a test at a library table" />
+    </div>
+  </main>
+  <footer>Pro Minds Tutoring · Text <strong>FALL</strong> to 312-956-3846 for a free 15-minute consultation<p style="max-width:880px;margin:10px auto 0;font-size:11px;line-height:1.6">AP&reg;, Advanced Placement&reg;, and SAT&reg; are registered trademarks of the College Board, which was not involved in the production of, and does not endorse, this site. ACT&reg; is a registered trademark of ACT, Inc., which was not involved in the production of, and does not endorse, this site.</p></footer>
+  <script>
+    (function () {
+      try {
+        var d = JSON.stringify({ site: "main", path: window.location.pathname, referrer: document.referrer || "" });
+        var u = "https://ap.promindstutoring.com/api/track";
+        if (navigator.sendBeacon) { navigator.sendBeacon(u, new Blob([d], { type: "text/plain" })); }
+        else { fetch(u, { method: "POST", body: d, headers: { "Content-Type": "text/plain" }, keepalive: true }).catch(function () {}); }
+      } catch (e) {}
+    })();
+  </script>
+
+<div id="pm-privacy" role="region" aria-label="Privacy notice" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:100;background:#073c59;color:#fff;border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,.3);font-size:14px;line-height:1.45;font-family:inherit;">
+<p style="margin:0;">Pro Minds counts visits privately: we record only the page visited, how you arrived (e.g. Facebook / Google / direct), approximate city and state, and device type. No names, no IP addresses, and no cookies that identify you.</p>
+<button id="pm-privacy-dismiss" style="flex:0 0 auto;background:#f5b800;color:#0b3249;border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;">Got it</button>
+</div>
+<script>(function(){try{if(localStorage.getItem("prominds-privacy-dismissed")){var e=document.getElementById("pm-privacy");if(e)e.style.display="none";}}catch(err){}var b=document.getElementById("pm-privacy-dismiss");if(b)b.addEventListener("click",function(){try{localStorage.setItem("prominds-privacy-dismissed","1");}catch(err){}var e=document.getElementById("pm-privacy");if(e)e.style.display="none";});})();</script>
+</body>
+</html>

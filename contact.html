@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#073c59" />
+  <meta name="description" content="Contact Pro Minds Tutoring — tell us what your student needs help with: Algebra 1, Algebra 2, Geometry, SAT, ACT, AP Precalculus, or AP Calculus AB/BC. We reply by email." />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+  <title>Contact Us | Pro Minds</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --navy:#073c59;
+      --navy-2:#0b506f;
+      --ink:#0a3150;
+      --blue:#0e6688;
+      --gold:#f5b800;
+      --gold-2:#ffcc32;
+      --paper:#f6fafc;
+      --card:#ffffff;
+      --soft:#e8f2f6;
+      --line:#bdd3dc;
+      --text:#133448;
+      --muted:#536d7d;
+      --shadow:0 20px 60px rgba(5,56,82,.13);
+      --r-lg:28px;
+      --r-md:18px;
+      --sans:"Source Sans 3",sans-serif;
+      --display:"Nunito Sans",sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --navy:#062d43;
+        --navy-2:#0a4966;
+        --ink:#eaf7fb;
+        --blue:#51b1d2;
+        --gold:#ffc62b;
+        --gold-2:#ffcf49;
+        --paper:#071c29;
+        --card:#0c2a3a;
+        --soft:#10384a;
+        --line:#27556a;
+        --text:#e9f5f8;
+        --muted:#b5cad4;
+        --shadow:0 20px 60px rgba(0,0,0,.25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    button,a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+
+    .topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid #bdd3dc}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0a3d62;font-weight:800;font-size:19px}
+    .brand img{border-radius:7px;display:block}
+    .topnav nav{display:flex;gap:28px;align-items:center}
+    .topnav nav a{color:#0a3d62;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.05em}
+    .topnav nav a:hover{color:#0e6688}
+    @media(max-width:560px){.topnav nav{gap:18px}.topnav nav a{font-size:15px}.brand span{display:none}}
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--gold-2);
+      font-size: .78rem;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+    .section-title {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 900;
+      color: var(--ink);
+      font-size: clamp(34px, 4.5vw, 56px);
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+    .section-intro {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    section { padding: clamp(64px, 8vw, 100px) 0; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: #fff;
+      padding: clamp(54px, 8vw, 104px) 0 58px;
+      isolation: isolate;
+    }
+    .hero-copy { position: relative; z-index: 1; max-width: 920px; }
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 23px;
+    }
+    .brand-lockup .eyebrow { margin: 0; }
+    .hero-brand {
+      display: block;
+      width: 52px;
+      height: auto;
+      flex: 0 0 auto;
+      border-radius: 12px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 900;
+      letter-spacing: -.045em;
+      font-size: clamp(44px, 6.5vw, 82px);
+      line-height: .98;
+      color: #fff;
+    }
+    .subhead {
+      max-width: 780px;
+      margin: 28px 0 0;
+      color: #dcecf3;
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .chip {
+      padding: 9px 15px;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.055);
+      border-radius: 999px;
+      color: #f5f8fa;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 34px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 13px 26px;
+      border-radius: 12px;
+      background: var(--gold);
+      color: #0b3249;
+      text-decoration: none;
+      font-family: var(--display);
+      font-weight: 900;
+      line-height: 1.15;
+      box-shadow: 0 12px 30px rgba(245,184,0,.22);
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .text-link { color: #fff; font-weight: 700; text-underline-offset: 5px; }
+    .hero-small { margin: 18px 0 0; color: #b5cad4; font-size: .9rem; }
+
+    .trust-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: -40px;
+      padding: 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.25fr;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--gold);
+      border-radius: 0 0 var(--r-md) var(--r-md);
+      overflow: hidden;
+    }
+    .trust-item {
+      min-height: 124px;
+      display: flex;
+      align-items: center;
+      padding: 26px 28px;
+      font-weight: 700;
+      line-height: 1.42;
+      color: var(--ink);
+    }
+    .trust-item + .trust-item { border-left: 1px solid var(--line); }
+
+    .sessions {
+      margin-top: 48px;
+      border-top: 1px solid var(--line);
+    }
+    .session {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 22px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .session-number {
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .session p { margin: 2px 0 0; font-size: 1.02rem; color: var(--text); }
+    .session strong { color: var(--ink); }
+    .plan-note {
+      margin: 30px 0 0;
+      padding: 22px 24px;
+      background: var(--soft);
+      border-left: 4px solid var(--navy);
+      border-radius: 0 12px 12px 0;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .how { background: var(--navy-2); color: #fff; }
+    .how .section-title { color: #fff; max-width: 700px; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 42px; }
+    .how-card {
+      min-height: 260px;
+      padding: 30px;
+      background: var(--card);
+      border-radius: var(--r-md);
+      border-bottom: 5px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+    .how-card h3 { margin: 0 0 14px; font-family: var(--display); font-weight: 800; font-size: 1.5rem; color: var(--ink); }
+    .how-card p { margin: 0; color: var(--muted); }
+
+    .reviews-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+    .review-lead { margin: 0 0 10px; font-size: 1.13rem; font-weight: 700; color: var(--ink); }
+    .review-subhead { margin: 0; color: var(--muted); }
+    .review-subhead a { color: var(--blue); font-weight: 700; text-underline-offset: 4px; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
+    blockquote {
+      position: relative;
+      margin: 0;
+      padding: 32px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    blockquote p { position: relative; z-index: 1; margin: 0; font-size: 1.06rem; font-style: italic; line-height: 1.6; }
+    blockquote footer { position: relative; z-index: 1; margin-top: 22px; color: var(--gold-2); font-size: .85rem; font-weight: 700; }
+    blockquote:first-child, blockquote:nth-child(4) { grid-row: span 2; }
+
+    .pricing { padding-top: 0; }
+    .price-panel {
+      background: var(--gold);
+      color: #0c3348;
+      border-radius: 28px;
+      padding: clamp(34px, 6vw, 56px);
+      box-shadow: var(--shadow);
+    }
+    .price-panel h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 900;
+      color: #0c3348;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+    }
+    .price-panel p { margin: 11px 0 0; font-weight: 700; }
+    .price-panel p a { color: #0c3348; text-underline-offset: 4px; }
+
+    .faq { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .faq-list { max-width: 840px; margin-top: 40px; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary {
+      position: relative;
+      cursor: pointer;
+      list-style: none;
+      padding: 20px 44px 20px 0;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 13px;
+      right: 7px;
+      color: var(--gold);
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 1.8rem;
+    }
+    details p { margin: -4px 0 22px; color: var(--muted); }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+    }
+    .final-cta h2 {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      font-family: var(--display);
+      font-weight: 900;
+      color: #fff;
+      font-size: clamp(34px, 4.5vw, 56px);
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+    .final-cta p { position: relative; margin: 18px 0 28px; color: #dcecf3; font-size: 1.08rem; }
+    .final-cta .button { position: relative; }
+
+    .site-footer { text-align: center; color: var(--muted); padding: 28px 20px; font-size: 14px; }
+    .site-footer .wrap { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .site-footer a { color: var(--blue); font-weight: 700; }
+    .site-footer .legal { max-width: 880px; margin: 12px auto 0; font-size: 11px; line-height: 1.6; }
+
+    :focus-visible { outline: 4px solid var(--gold-2); outline-offset: 3px; }
+
+    @media (max-width: 860px) {
+      .wrap { width: min(100% - 32px, 1180px); }
+      section { padding: clamp(54px, 7vw, 70px) 0; }
+      .trust-grid, .how-grid, .reviews-head { grid-template-columns: 1fr; }
+      .trust-item { min-height: 0; }
+      .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
+      .how-card { min-height: 0; }
+      .reviews-head { gap: 22px; }
+      .review-grid { grid-template-columns: 1fr; }
+      blockquote:first-child, blockquote:nth-child(4) { grid-row: auto; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1180px); }
+      .hero { padding-top: 44px; }
+      .chip { width: 100%; border-radius: 6px; text-align: center; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+      .text-link { text-align: center; }
+      .trust-strip { margin-top: -28px; }
+      .trust-item { padding: 20px 22px; }
+      .session { grid-template-columns: 50px minmax(0, 1fr); gap: 14px; }
+      .session-number { font-size: 2rem; }
+      .session p { font-size: .94rem; }
+      .plan-note { margin-top: 24px; padding: 19px; }
+      .how-card, blockquote { padding: 24px; }
+      .price-panel { padding: 30px 24px; border-radius: 20px; }
+      .site-footer .wrap { flex-direction: column; gap: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+      .button:hover { transform: none; }
+    }
+
+    .topic-head { margin: 44px 0 6px; font-family: var(--display); font-weight: 900; color: var(--ink); font-size: clamp(24px, 3vw, 34px); letter-spacing: -.02em; }
+    .topic-head:first-of-type { margin-top: 8px; }
+    .topic-note { margin: 0 0 6px; color: var(--muted); max-width: 720px; }
+    .samples-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; }
+    .sample-card { padding: 28px; background: var(--card); border-radius: var(--r-md); border-bottom: 5px solid var(--gold); box-shadow: var(--shadow); }
+    .sample-tag { margin: 0 0 10px; font-size: .75rem; font-weight: 800; letter-spacing: .12em; color: var(--blue); text-transform: uppercase; }
+    .problem { margin: 0; font-size: 1.12rem; font-weight: 700; color: var(--ink); line-height: 1.45; }
+    .sample-card details { margin-top: 14px; border-top: 1px solid var(--line); }
+    .sample-card summary { padding: 14px 34px 6px 0; font-size: .98rem; }
+    .sample-card details p { margin: 6px 0; color: var(--text); font-size: .99rem; }
+    .sample-card .stuck { margin-top: 12px; padding: 12px 14px; background: var(--soft); border-left: 4px solid var(--navy); border-radius: 0 10px 10px 0; color: var(--ink); font-weight: 600; font-size: .95rem; }
+    .answer { font-weight: 800; color: var(--ink); }
+    details[open] summary::after { content: "−"; }
+    @media (max-width: 860px) { .samples-grid { grid-template-columns: 1fr; } }
+  
+    .contact-main { padding: clamp(48px, 6vw, 72px) 0; }
+    .form-wrap { max-width: 860px; }
+    .form-card { background: #fff; color: #133448; border-radius: 18px; padding: 36px; box-shadow: 0 20px 60px rgba(0,0,0,.25); text-align: left; }
+    .form-card label { display: block; font-weight: 700; color: #0a3150; margin: 18px 0 6px; font-size: .95rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-grid label { margin-top: 0; }
+    .form-card input, .form-card select, .form-card textarea { width: 100%; border: 1px solid #bdd3dc; border-radius: 12px; padding: 13px 15px; font: inherit; color: #133448; background: #fff; box-sizing: border-box; }
+    .form-card input:focus, .form-card select:focus, .form-card textarea:focus { outline: 3px solid #ffcc32; outline-offset: 1px; border-color: #0e6688; }
+    .form-submit { width: 100%; margin-top: 22px; border: 0; cursor: pointer; font: inherit; }
+    .form-note { text-align: center; color: #536d7d; font-size: .9rem; margin: 14px 0 0; }
+    .form-note.error { color: #b3261e; font-weight: 700; }
+    .text-alt { text-align: center; margin-top: 22px; color: #dcecf3; }
+    .text-alt a { color: #f5b800; font-weight: 800; }
+    @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="Pro Minds home"><img src="/pie-logo.png" alt="" width="28" height="28" /><span>Pro Minds</span></a>
+      <nav aria-label="Programs">
+        <a href="https://promindstutoring.com/sat/">SAT</a>
+        <a href="https://promindstutoring.com/act/">ACT</a>
+        <a href="https://ap.promindstutoring.com/">AP</a>
+        <a href="https://promindstutoring.com/algebra/">Algebra</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-copy">
+        <div class="brand-lockup">
+          <p class="eyebrow">PRO MINDS</p>
+        </div>
+        <h1>Contact us</h1>
+        <p class="subhead">Tell us what your student needs help with — we&rsquo;ll reply by email with next steps and times for a free 15-minute consultation.</p>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="wrap form-wrap">
+        <div class="form-card">
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="cf-name">Your name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+            <label for="cf-subject">What do you need help with?</label>
+            <select id="cf-subject" name="test">
+              <option>Algebra 1</option>
+              <option>Algebra 2</option>
+              <option>Geometry</option>
+              <option>SAT</option>
+              <option>ACT</option>
+              <option>AP Precalculus</option>
+              <option>AP Calculus AB</option>
+              <option>AP Calculus BC</option>
+              <option>Something else</option>
+            </select>
+            <label for="cf-message">Anything we should know?</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="e.g. 10th grade, struggling with factoring, quiz coming up next week&hellip;" required></textarea>
+            <button class="button form-submit" type="submit" id="cf-submit">Send message</button>
+            <p class="form-note" id="cf-status" role="status"></p>
+            <p class="form-note">Your details are only used to reply to your inquiry.</p>
+          </form>
+          <div id="cf-thanks" hidden>
+            <h2 style="font-family:'Nunito Sans',sans-serif;color:#0a3150;margin:0 0 10px;">Thanks — message sent.</h2>
+            <p style="margin:0;">We&rsquo;ll reply by email shortly. Need us faster? Text &ldquo;FALL&rdquo; to 312-956-3846.</p>
+          </div>
+        </div>
+        <p class="text-alt">Prefer to text? <a href="tel:+13129563846">Text &ldquo;FALL&rdquo; to 312-956-3846</a> for a free 15-minute consultation.</p>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <h2>Not sure which program fits?</h2>
+        <p>Start with a free 15-minute consultation — we&rsquo;ll point you the right way.</p>
+        <a class="button" href="tel:+13129563846">Text &ldquo;FALL&rdquo; to 312-956-3846</a>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+    <div class="wrap">
+      <span>Pro Minds Tutoring · Text <strong>FALL</strong> to 312-956-3846 for a free 15-minute consultation</span>
+    </div>
+    <p class="legal">AP&reg;, Advanced Placement&reg;, and SAT&reg; are registered trademarks of the College Board, which was not involved in the production of, and does not endorse, this site. ACT&reg; is a registered trademark of ACT, Inc., which was not involved in the production of, and does not endorse, this site.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var status = document.getElementById("cf-status");
+      var btn = document.getElementById("cf-submit");
+      var data = {
+        name: document.getElementById("cf-name").value.trim(),
+        email: document.getElementById("cf-email").value.trim(),
+        test: document.getElementById("cf-subject").value,
+        message: document.getElementById("cf-message").value.trim()
+      };
+      status.className = "form-note";
+      if (!data.name || !data.email || !data.message) {
+        status.textContent = "Please fill in your name, email, and a short message.";
+        status.classList.add("error");
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = "Sending\u2026";
+      status.textContent = "";
+      try {
+        var r = await fetch("https://ap.promindstutoring.com/api/inquiries", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        if (!r.ok) throw new Error("send failed");
+        document.getElementById("contactForm").hidden = true;
+        document.getElementById("cf-thanks").hidden = false;
+        document.querySelector(".form-card").scrollIntoView({ behavior: "smooth", block: "center" });
+      } catch (err) {
+        status.textContent = "Something went wrong sending that \u2014 please text \u201CFALL\u201D to 312-956-3846 instead.";
+        status.classList.add("error");
+        btn.disabled = false;
+        btn.textContent = "Send message";
+      }
+    });
+  </script>
+
+  <script>
+    (function () {
+      var want = new URLSearchParams(window.location.search).get("s");
+      var sel = document.getElementById("cf-subject");
+      if (want && sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text === want) { sel.selectedIndex = i; break; }
+        }
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      try {
+        var d = JSON.stringify({ site: "main", path: window.location.pathname, referrer: document.referrer || "" });
+        var u = "https://ap.promindstutoring.com/api/track";
+        if (navigator.sendBeacon) { navigator.sendBeacon(u, new Blob([d], { type: "text/plain" })); }
+        else { fetch(u, { method: "POST", body: d, headers: { "Content-Type": "text/plain" }, keepalive: true }).catch(function () {}); }
+      } catch (e) {}
+    })();
+  </script>
+
+<div id="pm-privacy" role="region" aria-label="Privacy notice" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:100;background:#073c59;color:#fff;border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,.3);font-size:14px;line-height:1.45;font-family:inherit;">
+<p style="margin:0;">Pro Minds counts visits privately: we record only the page visited, how you arrived (e.g. Facebook / Google / direct), approximate city and state, and device type. No names, no IP addresses, and no cookies that identify you.</p>
+<button id="pm-privacy-dismiss" style="flex:0 0 auto;background:#f5b800;color:#0b3249;border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;">Got it</button>
+</div>
+<script>(function(){try{if(localStorage.getItem("prominds-privacy-dismissed")){var e=document.getElementById("pm-privacy");if(e)e.style.display="none";}}catch(err){}var b=document.getElementById("pm-privacy-dismiss");if(b)b.addEventListener("click",function(){try{localStorage.setItem("prominds-privacy-dismissed","1");}catch(err){}var e=document.getElementById("pm-privacy");if(e)e.style.display="none";});})();</script>
+</body>
+</html>

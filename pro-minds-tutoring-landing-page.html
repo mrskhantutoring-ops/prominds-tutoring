@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Pro Minds Tutoring</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --navy:#073c59;
+      --navy-2:#0b506f;
+      --ink:#0a3150;
+      --blue:#0e6688;
+      --gold:#f5b800;
+      --gold-2:#ffcc32;
+      --paper:#f6fafc;
+      --card:#ffffff;
+      --soft:#e8f2f6;
+      --line:#bdd3dc;
+      --text:#133448;
+      --muted:#536d7d;
+      --shadow:0 20px 60px rgba(5,56,82,.13);
+      --r-lg:28px;
+      --r-md:18px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --navy:#062d43;
+        --navy-2:#0a4966;
+        --ink:#eaf7fb;
+        --blue:#51b1d2;
+        --gold:#ffc62b;
+        --gold-2:#ffcf49;
+        --paper:#071c29;
+        --card:#0c2a3a;
+        --soft:#10384a;
+        --line:#27556a;
+        --text:#e9f5f8;
+        --muted:#b5cad4;
+        --shadow:0 20px 60px rgba(0,0,0,.25);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--text);font-family:"Source Sans 3",sans-serif;font-size:17px;line-height:1.5}
+    a{color:inherit}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+    .topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0a3d62;font-weight:800;font-size:19px}
+    .brand img{border-radius:7px;display:block}
+    .topnav nav{display:flex;gap:28px;align-items:center}
+    .topnav nav a{color:#0a3d62;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.05em}
+    .topnav nav a:hover{color:var(--blue)}
+    @media(max-width:560px){.topnav nav{gap:18px}.topnav nav a{font-size:15px}.brand span{display:none}}
+    .hero{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:clamp(54px,8vw,104px) 0 58px;isolation:isolate}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:70px;align-items:center}
+    .question-line{font-family:"Nunito Sans",sans-serif;font-weight:900;letter-spacing:-.045em;font-size:clamp(44px,6.5vw,82px);line-height:.98;margin:0;max-width:800px}
+    .question-line span{display:block}
+    .question-line .gold{color:var(--gold-2)}
+    .subline{display:inline-block;margin:28px 0 0;padding-bottom:7px;font-size:clamp(20px,2.2vw,29px);font-style:italic;font-weight:600;border-bottom:6px solid var(--gold)}
+    .fall-badge{display:inline-flex;margin-top:26px;background:var(--gold);color:#16354a;border-radius:999px;padding:8px 15px;font-weight:800;font-size:15px}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:13px 22px;border-radius:12px;text-decoration:none;font-family:"Nunito Sans",sans-serif;font-weight:900;line-height:1.15;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--gold);color:#0b3249;box-shadow:0 12px 30px rgba(245,184,0,.22)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+    .phone{font-size:1.05em}
+    .math-orbit{min-height:360px;position:relative;display:grid;place-items:center}
+    .orbit{position:absolute;border:1px solid rgba(255,255,255,.22);border-radius:50%;transform:rotate(-14deg)}
+    .orbit.one{width:340px;height:220px}.orbit.two{width:240px;height:340px;transform:rotate(28deg)}
+    .center-mark{position:relative;width:172px;height:172px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;text-align:center;font-family:"Nunito Sans",sans-serif;font-size:27px;line-height:1.06;font-weight:900;box-shadow:0 22px 60px rgba(0,0,0,.22)}
+    .math-chip{position:absolute;display:grid;place-items:center;min-width:70px;height:70px;padding:0 14px;border-radius:16px;background:#fff;color:#0b4966;font:900 26px/1 "Nunito Sans",sans-serif;box-shadow:0 15px 35px rgba(0,0,0,.18)}
+    .mc1{top:12px;right:42px;transform:rotate(6deg)}.mc2{bottom:20px;left:12px;transform:rotate(-8deg)}.mc3{top:45%;right:0;transform:rotate(3deg)}.mc4{top:42px;left:0;transform:rotate(-5deg)}
+    .pain-band{background:var(--navy-2);color:#fff;border-top:1px solid rgba(255,255,255,.15)}
+    .pain-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .pain{padding:28px 25px;display:flex;gap:15px;align-items:center;min-height:116px;border-right:1px dashed rgba(255,255,255,.35);font-family:"Nunito Sans",sans-serif;font-weight:800;font-size:18px}
+    .pain:last-child{border-right:0}
+    .icon-circle{flex:0 0 48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.7);display:grid;place-items:center;color:var(--gold)}
+    .icon-circle svg{width:25px;height:25px}
+    section{padding:clamp(64px,8vw,100px) 0}
+    .section-kicker{color:var(--blue);font-weight:800;margin:0 0 8px}
+    h2{font-family:"Nunito Sans",sans-serif;color:var(--ink);font-size:clamp(34px,4.5vw,56px);letter-spacing:-.035em;line-height:1.05;margin:0}
+    .about-grid{display:grid;grid-template-columns:.76fr 1.24fr;gap:56px;align-items:start}
+    .about-name{font-size:clamp(52px,7vw,84px);line-height:.96;margin-bottom:20px}
+    .credential{font-family:"Nunito Sans",sans-serif;font-size:22px;font-weight:800;color:var(--blue);margin:0}
+    .experience{font-size:21px;font-style:italic;font-weight:600;margin:7px 0 30px}
+    .proof-row{display:flex;gap:14px;flex-wrap:wrap}
+    .proof{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:18px 21px;border-radius:16px}
+    .stars{letter-spacing:3px;color:var(--gold);font-size:25px;line-height:1}
+    .proof strong{display:block;font-family:"Nunito Sans",sans-serif;color:var(--ink);margin-top:10px}
+    .proof small{display:block;color:var(--muted);font-weight:700;margin-top:4px}
+    .fb-btn{display:inline-flex;margin-top:18px;color:var(--blue);font-weight:800;text-underline-offset:4px}
+    .outcomes{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .outcome{background:var(--card);padding:24px;border:1px solid var(--line);border-radius:var(--r-md);display:grid;grid-template-columns:44px 1fr;gap:14px}
+    .outcome-num{font-family:"Nunito Sans",sans-serif;font-weight:900;color:var(--gold);font-size:28px}
+    .outcome h3{font:800 21px/1.2 "Nunito Sans",sans-serif;color:var(--ink);margin:0 0 6px}
+    .outcome p{margin:0;color:var(--muted)}
+    .changes{background:var(--soft)}
+    .changes-head{text-align:center;max-width:730px;margin:0 auto 44px}
+    .changes-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:stretch}
+    .checklist{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+    .checklist li{display:grid;grid-template-columns:30px 1fr;gap:12px;font-weight:700;color:var(--ink)}
+    .check{width:25px;height:25px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:15px;font-weight:900;margin-top:1px}
+    .review{position:relative;background:var(--navy);color:#fff;border-radius:26px;padding:36px;box-shadow:var(--shadow);overflow:hidden}
+    .review blockquote{position:relative;z-index:1;margin:0;font-size:19px;font-style:italic;line-height:1.6}
+    .review cite{display:block;margin-top:22px;color:var(--gold-2);font-style:normal;font-weight:800}
+    .subjects-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:35px}
+    .subjects-note{color:var(--muted);font-weight:700;margin:0}
+    .subject-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .subject{min-height:126px;padding:22px;background:var(--card);border-bottom:5px solid var(--gold);box-shadow:0 10px 34px rgba(5,56,82,.08);font:800 20px/1.2 "Nunito Sans",sans-serif;color:var(--ink);display:flex;flex-direction:column;justify-content:space-between;border-radius:12px 12px 4px 4px}
+    .subject span{color:var(--blue);font-size:24px}
+    .service-band{margin-top:46px;background:var(--navy);color:#fff;border-radius:18px;padding:22px 26px;display:flex;justify-content:space-around;gap:24px;flex-wrap:wrap;font-family:"Nunito Sans",sans-serif;font-weight:800;font-size:19px}
+    .service-band span{display:flex;align-items:center;gap:10px}
+    .service-band svg{width:24px;color:var(--gold)}
+    .contact{padding-top:0}
+    .contact-card{background:var(--gold);color:#0c3348;border-radius:28px;padding:clamp(34px,6vw,64px);display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;box-shadow:var(--shadow)}
+    .contact-card h2{color:#0c3348;max-width:620px}
+    .contact-card p{margin:14px 0 0;font-size:21px;font-weight:700}
+    .contact-actions{display:flex;flex-direction:column;gap:12px;min-width:270px}
+    .contact-actions .btn-primary{background:var(--navy);color:#fff;box-shadow:none}
+    .contact-actions .btn-secondary{border-color:rgba(12,51,72,.35);color:#0c3348;background:rgba(255,255,255,.25)}
+    footer{text-align:center;color:var(--muted);padding:0 20px 32px;font-size:14px}
+    :focus-visible{outline:4px solid var(--gold-2);outline-offset:3px}
+    @media (max-width:860px){
+      .hero-grid,.about-grid,.changes-grid,.contact-card{grid-template-columns:1fr}
+      .hero-grid{gap:35px}.math-orbit{min-height:300px}.about-grid{gap:40px}.contact-actions{min-width:0;width:100%}
+      .pain-grid{grid-template-columns:1fr 1fr}.pain:nth-child(2){border-right:0}.pain:nth-child(-n+2){border-bottom:1px dashed rgba(255,255,255,.35)}
+      .subject-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .wrap{width:min(1180px,calc(100% - 40px))}
+      .hero{padding-top:44px}.question-line{font-size:47px}.hero-cta .btn{width:100%}.math-orbit{min-height:270px;transform:scale(.88);margin-inline:-22px}
+      .pain-grid{grid-template-columns:1fr}.pain{border-right:0;border-bottom:1px dashed rgba(255,255,255,.35);min-height:auto;padding:20px 5px}.pain:last-child{border-bottom:0}
+      .outcomes,.subject-grid{grid-template-columns:1fr}.outcome{padding:20px}.subjects-head{display:block}.subjects-note{margin-top:10px}
+      .review{padding:28px 24px}.contact-card{border-radius:20px}.service-band{justify-content:flex-start}
+      .fall-badge{border-radius:10px}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="Pro Minds Tutoring home"><img src="/favicon-32x32.png" alt="" width="28" height="28" /><span>Pro Minds</span></a>
+      <nav aria-label="Programs">
+        <a href="https://promindstutoring.com/sat/">SAT</a>
+        <a href="https://promindstutoring.com/act/">ACT</a>
+        <a href="https://promindstutoring.com/AP/">AP</a>
+        <a href="https://promindstutoring.com/algebra/">Algebra</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 class="question-line"><span>Homework tears?</span><span>Falling grades?</span><span class="gold">Math anxiety?</span></h1>
+          <p class="subline">close the gap before it grows.</p><br>
+          <div class="fall-badge">Only a few fall spots left with Ms. Faryal</div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="tel:+13129563846" aria-label="Call 312-956-3846 for a free 15-minute consultation">Get your free 15-minute consultation<br><span class="phone">Text “FALL” to 312-956-3846</span></a>
+            <a class="btn btn-secondary" href="#changes">What changes for your child</a>
+          </div>
+        </div>
+        <div class="math-orbit" aria-hidden="true">
+          <div class="orbit one"></div><div class="orbit two"></div>
+          <div class="math-chip mc1">x²</div><div class="math-chip mc2">∫</div><div class="math-chip mc3">f(x)</div><div class="math-chip mc4">△</div>
+          <div class="center-mark">Patient.<br>Personalized.<br>Clear.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pain-band" aria-label="Common challenges">
+      <div class="wrap pain-grid">
+        <div class="pain"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z"/><path d="M8.5 10h.01M15.5 10h.01M9 16c1.8-1.3 4.2-1.3 6 0"/></svg></span><span>Sound familiar?</span></div>
+        <div class="pain"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M5 20V9l7-6 7 6v11"/><path d="M9 13h6M12 10v6"/></svg></span><span>Meltdowns over homework</span></div>
+        <div class="pain"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h10v4H7zM5 5H3v16h18V5h-2M8 12h8M8 16h5"/></svg></span><span>Panicking before tests</span></div>
+        <div class="pain"><span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3"/><path d="m3 5 6 4 5-4 7 4"/></svg></span><span>Grades slipping every report card</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap about-grid">
+        <div>
+          <p class="section-kicker">Math tutoring with a clear plan</p>
+          <h2 class="about-name">Ms. Faryal</h2>
+          <p class="credential">B.S. Computer Science, Math Minor</p>
+          <p class="experience">10+ years tutoring experience</p>
+          <div class="proof-row">
+            <div class="proof" aria-label="5 stars, 100 percent recommend, 8 reviews"><div class="stars" aria-hidden="true">★★★★★</div><strong>100% Recommend</strong><small>8 Reviews</small></div>
+          </div>
+          <a class="fb-btn" href="tel:+13129563846">Text “FALL” to 312-956-3846 →</a>
+        </div>
+        <div class="outcomes" id="changes">
+          <article class="outcome"><div class="outcome-num">01</div><div><h3>No more homework battles</h3><p>We diagnose exactly where the confusion starts, so nights stop ending in tears.</p></div></article>
+          <article class="outcome"><div class="outcome-num">02</div><div><h3>Test-day confidence, not panic</h3><p>Guided practice builds real understanding, not last-minute cramming.</p></div></article>
+          <article class="outcome"><div class="outcome-num">03</div><div><h3>Grades that actually move</h3><p>Clear explanations plus steady practice turn confusion into results.</p></div></article>
+          <article class="outcome"><div class="outcome-num">04</div><div><h3>A student who tries again</h3><p>Step-by-step wins rebuild the confidence math has worn down.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="changes">
+      <div class="wrap">
+        <div class="changes-head"><p class="section-kicker">What changes for your child</p><h2>Support that meets them where they are</h2></div>
+        <div class="changes-grid">
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Patient, supportive, result-oriented teaching</span></li>
+            <li><span class="check">✓</span><span>Personalized lessons built around your child’s gaps</span></li>
+            <li><span class="check">✓</span><span>Regular progress updates, so you’re never guessing</span></li>
+            <li><span class="check">✓</span><span>Grades 4th through high school, in-person or online</span></li>
+          </ul>
+          <aside class="review">
+            <blockquote>“Ms. Faryal is an amazing math teacher. My son’s grades improved significantly after she started tutoring him Algebra 2. She has a wonderful ability to identify gaps in foundational knowledge, rebuild those basics, and explain concepts in a simple, clear way that helps students truly excel.”</blockquote>
+            <cite>— Nawar Hattab, Parent (Facebook Review)</cite>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="subjects-head"><div><p class="section-kicker">Subjects I teach</p><h2>From foundations to test day</h2></div><p class="subjects-note">Grades 4th – High School</p></div>
+        <div class="subject-grid">
+          <div class="subject"><span>x²</span>Pre-Algebra</div>
+          <a class="subject" href="/algebra/" style="text-decoration:none"><span>x+y</span>Algebra 1 &amp; 2</a>
+          <div class="subject"><span>△</span>Geometry</div>
+          <div class="subject"><span>f(x)</span>Pre-Calculus</div>
+          <div class="subject"><span>∫</span>Calculus</div>
+          <div class="subject"><span>d/dx</span>Calc AB/BC</div>
+          <div class="subject"><span>✓</span>Test Prep (ACT/SAT)</div>
+        </div>
+        <div class="service-band">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Grades 4th – High School</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/></svg>Serving families online &amp; in person</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div><h2>Get your free 15-minute consultation</h2><p>Text “FALL” to 312-956-3846</p></div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+13129563846">Call 312-956-3846</a>
+            <a class="btn btn-secondary" href="tel:+13129563846">Text “FALL” to 312-956-3846</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Pro Minds Tutoring<p style="max-width:880px;margin:10px auto 0;font-size:11px;line-height:1.6">AP&reg;, Advanced Placement&reg;, and SAT&reg; are registered trademarks of the College Board, which was not involved in the production of, and does not endorse, this site. ACT&reg; is a registered trademark of ACT, Inc., which was not involved in the production of, and does not endorse, this site.</p></footer>
+  <script>
+    (function () {
+      try {
+        var d = JSON.stringify({ site: "main", path: window.location.pathname, referrer: document.referrer || "" });
+        var u = "https://ap.promindstutoring.com/api/track";
+        if (navigator.sendBeacon) { navigator.sendBeacon(u, new Blob([d], { type: "text/plain" })); }
+        else { fetch(u, { method: "POST", body: d, headers: { "Content-Type": "text/plain" }, keepalive: true }).catch(function () {}); }
+      } catch (e) {}
+    })();
+  </script>
+
+<div id="pm-privacy" role="region" aria-label="Privacy notice" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:100;background:#073c59;color:#fff;border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,.3);font-size:14px;line-height:1.45;font-family:inherit;">
+<p style="margin:0;">Pro Minds counts visits privately: we record only the page visited, how you arrived (e.g. Facebook / Google / direct), approximate city and state, and device type. No names, no IP addresses, and no cookies that identify you.</p>
+<button id="pm-privacy-dismiss" style="flex:0 0 auto;background:#f5b800;color:#0b3249;border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;">Got it</button>
+</div>
+<script>(function(){try{if(localStorage.getItem("prominds-privacy-dismissed")){var e=document.getElementById("pm-privacy");if(e)e.style.display="none";}}catch(err){}var b=document.getElementById("pm-privacy-dismiss");if(b)b.addEventListener("click",function(){try{localStorage.setItem("prominds-privacy-dismissed","1");}catch(err){}var e=document.getElementById("pm-privacy");if(e)e.style.display="none";});})();</script>
+</body>
+</html>
